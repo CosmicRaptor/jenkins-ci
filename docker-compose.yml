@@ -18,7 +18,7 @@ services:
     # This maps your computer's port 8080 to the
     # container's port 8080 (which you EXPOSEd).
     ports:
-      - "8080:8080"
+      - "8000:8080"
 
     # You can add environment variables here, which is
     # very common for Spring Boot applications.
