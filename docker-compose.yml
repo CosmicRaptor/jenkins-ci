@@ -1,0 +1,28 @@
+# Use version 3.8 for modern features
+version: "3.8"
+
+services:
+  # This is the name of your service
+  app:
+    # 'build: .' tells Compose to build the image
+    # using the 'Dockerfile' in the current directory.
+    build: .
+
+    # This is the name the built image will have
+    image: my-java-app:latest
+
+    # This ensures the container restarts if it stops
+    # unless you manually stop it.
+    restart: unless-stopped
+
+    # This maps your computer's port 8080 to the
+    # container's port 8080 (which you EXPOSEd).
+    ports:
+      - "8080:8080"
+
+    # You can add environment variables here, which is
+    # very common for Spring Boot applications.
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+      # - DATABASE_URL=...
+      # - DATABASE_PASSWORD=...
