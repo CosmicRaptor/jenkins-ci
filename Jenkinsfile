@@ -6,6 +6,10 @@ pipeline {
         maven 'MyMaven' 
     }
 
+    environment {
+        PATH = "/usr/local/bin:${env.PATH}"
+    }
+
     stages {
         stage('1. Checkout Code') {
             steps {
