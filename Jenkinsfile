@@ -10,7 +10,7 @@ pipeline {
         stage('1. Checkout Code') {
             steps {
                 // Pulls the code from your Git repo (links to Topic 1)
-                git 'https://github.com/CosmicRaptor/jenkins-ci.git'
+                echo 'Code was checked out by the SCM job configuration.'
             }
         }
 
